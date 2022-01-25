@@ -17,15 +17,15 @@ library
   exposed-modules:     Lib
   build-depends:       base
 --  ghc-options:         -Werror -Wall
-  default-extensions:  StrictData, NoImplicitPrelude
+  default-extensions:  StrictData
 --   other-extensions:    NoImplicitPrelude
   default-language:    Haskell2010
 
-executable hascats-exe
+executable check-hash
   hs-source-dirs:      app
   main-is:             Main.hs
-  build-depends:       base, check-hash
+  build-depends:       base, check-hash, hashable, filepath, bytestring, directory
 --  ghc-options:         -threaded -Werror -Wall
-  default-extensions:  StrictData, NoImplicitPrelude
+  default-extensions:  StrictData
 --  other-extensions:    NoImplicitPrelude
   default-language:    Haskell2010
